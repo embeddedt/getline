@@ -12,7 +12,8 @@
 #include <limits.h>
 
 ssize_t getdelim(char **lineptr, size_t *n, int delim, FILE *stream) {
-    char c, *cur_pos, *new_lineptr;
+    char *cur_pos, *new_lineptr;
+    int c;
     size_t new_lineptr_len;
 
     if (lineptr == NULL || n == NULL || stream == NULL) {
